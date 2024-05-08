@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify
 from fastai.vision.all import *
-
+import pathlib
+plt = platform.system()
+if plt == 'Windows': pathlib.PosixPath = pathlib.WindowsPath
 app = Flask(__name__)
 learn = load_learner('modeldatesF.pkl')
 learn2 = load_learner('modeldatesFquality.pkl')
