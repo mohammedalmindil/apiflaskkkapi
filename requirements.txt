@@ -2,3 +2,4 @@ flask
 fastai
 gunicorn
 pathlib
+timm
